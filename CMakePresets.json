@@ -1,62 +1,95 @@
 {
-    "version": 6,
-    "cmakeMinimumRequired": {
-      "major": 3,
-      "minor": 23,
-      "patch": 0
-    },
-    "configurePresets": [
-        {
-            "name": "debug-clang",
-            "displayName": "Debug Clang (system-default)",
-            "description": "Using compilers: C = clang, CXX = clang++",
-            "generator": "Ninja",
-            "binaryDir": "${sourceDir}/build/debug-clang",
-            "cacheVariables": {
-                "CMAKE_C_COMPILER": "clang",
-                "CMAKE_CXX_COMPILER": "clang++",
-                "CMAKE_BUILD_TYPE": "Debug"
-            }
-        },
-        {
-            "name": "debug-clang-examples",
-            "displayName": "Debug Clang (system-default) with examples",
-            "description": "Using compilers: C = clang, CXX = clang++",
-            "generator": "Ninja",
-            "binaryDir": "${sourceDir}/build/debug-clang-examples",
-            "cacheVariables": {
-                "CMAKE_C_COMPILER": "clang",
-                "CMAKE_CXX_COMPILER": "clang++",
-                "CMAKE_BUILD_TYPE": "Debug",
-                "FORGE_BUILD_EXAMPLES": "ON"
-            }
-        },
-        {
-          "name": "release-clang-examples",
-          "displayName": "Release Clang (system-default) with examples",
-          "description": "Using compilers: C = clang, CXX = clang++",
-          "generator": "Ninja",
-          "binaryDir": "${sourceDir}/build/debug-clang-examples",
-          "cacheVariables": {
-              "CMAKE_C_COMPILER": "clang",
-              "CMAKE_CXX_COMPILER": "clang++",
-              "CMAKE_BUILD_TYPE": "Release",
-              "FORGE_BUILD_EXAMPLES": "ON"
-          }
+  "version": 6,
+  "cmakeMinimumRequired": {
+    "major": 3,
+    "minor": 23,
+    "patch": 0
+  },
+  "configurePresets": [
+    {
+      "name": "debug-clang",
+      "displayName": "Debug Clang (system-default)",
+      "description": "Using compilers: C = clang, CXX = clang++",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/debug-clang",
+      "cacheVariables": {
+        "CMAKE_C_COMPILER": "clang",
+        "CMAKE_CXX_COMPILER": "clang++",
+        "CMAKE_BUILD_TYPE": "Debug"
       }
+    },
+    {
+      "name": "debug-clang-examples",
+      "displayName": "Debug Clang (system-default) with examples",
+      "description": "Using compilers: C = clang, CXX = clang++",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/debug-clang-examples",
+      "cacheVariables": {
+        "CMAKE_C_COMPILER": "clang",
+        "CMAKE_CXX_COMPILER": "clang++",
+        "CMAKE_BUILD_TYPE": "Debug",
+        "FORGE_BUILD_EXAMPLES": "ON"
+      }
+    },
+    {
+      "name": "release-clang",
+      "displayName": "Release Clang (system-default)",
+      "description": "Using compilers: C = clang, CXX = clang++",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/release-clang",
+      "cacheVariables": {
+        "CMAKE_C_COMPILER": "clang",
+        "CMAKE_CXX_COMPILER": "clang++",
+        "CMAKE_BUILD_TYPE": "Release"
+      }
+    },
+    {
+      "name": "release-clang-examples",
+      "displayName": "Release Clang (system-default) with examples",
+      "description": "Using compilers: C = clang, CXX = clang++",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/release-clang-examples",
+      "cacheVariables": {
+        "CMAKE_C_COMPILER": "clang",
+        "CMAKE_CXX_COMPILER": "clang++",
+        "CMAKE_BUILD_TYPE": "Release",
+        "FORGE_BUILD_EXAMPLES": "ON"
+      }
+    },
+    {
+      "name": "release-gcc-examples",
+      "displayName": "Release gcc (system-default) with examples",
+      "description": "Using compilers: C = gcc, CXX = g++",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/release-gcc-examples",
+      "cacheVariables": {
+        "CMAKE_C_COMPILER": "gcc",
+        "CMAKE_CXX_COMPILER": "g++",
+        "CMAKE_BUILD_TYPE": "Release",
+        "FORGE_BUILD_EXAMPLES": "ON"
+      }
+    }
   ],
-    "buildPresets": [
-        {
-          "name": "debug-clang",
-          "configurePreset": "debug-clang"
-        },
-        {
-          "name": "debug-clang-examples",
-          "configurePreset": "debug-clang-examples"
-        },
-        {
-          "name": "release-clang-examples",
-          "configurePreset": "release-clang-examples"
-        }
-      ]
+  "buildPresets": [
+    {
+      "name": "debug-clang",
+      "configurePreset": "debug-clang"
+    },
+    {
+      "name": "debug-clang-examples",
+      "configurePreset": "debug-clang-examples"
+    },
+    {
+      "name": "release-clang",
+      "configurePreset": "release-clang"
+    },
+    {
+      "name": "release-clang-examples",
+      "configurePreset": "release-clang-examples"
+    },
+    {
+      "name": "release-gcc-examples",
+      "configurePreset": "release-gcc-examples"
+    }
+  ]
 }
