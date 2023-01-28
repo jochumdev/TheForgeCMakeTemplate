@@ -4,6 +4,15 @@ This is a basic template for compiling [The Forge](https://github.com/ConfettiFX
 
 ## Usage
 
+Build with all examples:
+
+```bash
+mkdir build; cd build
+CC=/usr/bin/clang CXX=/usr/bin/clang++ cmake -DFORGE_BUILD_EXAMPLES=ON -G Ninja ..; cmake --build .
+```
+
+Build no examples:
+
 ```bash
 mkdir build; cd build
 CC=/usr/bin/clang CXX=/usr/bin/clang++ cmake -G Ninja ..; cmake --build .
