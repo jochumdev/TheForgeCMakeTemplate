@@ -1,0 +1,6 @@
+[submodule "vendor/TheForge"]
+	path = vendor/TheForge
+	url = https://github.com/ConfettiFX/The-Forge.git
+[submodule "vendor/TheForgeCMake"]
+	path = vendor/TheForgeCMake
+	url = https://github.com/jochumdev/TheForgeCMake.git
