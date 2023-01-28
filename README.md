@@ -2,9 +2,23 @@
 
 This is a basic template for compiling [The Forge](https://github.com/ConfettiFX/The-Forge) with [CMake](https://cmake.org/).
 
-## Usage
+## Usage (presets)
 
-Build with all examples:
+Build with all examples (the download of "Art.zip" might take ages):
+
+```bash
+cmake --preset debug-clang-examples && cmake --build --preset debug-clang-examples
+```
+
+Build no examples:
+
+```bash
+cmake --preset debug-clang && cmake --build --preset debug-clang
+```
+
+## Usage (no presets)
+
+Build with all examples (the download of "Art.zip" might take ages):
 
 ```bash
 mkdir build; cd build
