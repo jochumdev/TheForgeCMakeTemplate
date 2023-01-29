@@ -57,6 +57,18 @@
       }
     },
     {
+      "name": "release-gcc",
+      "displayName": "Release gcc (system-default)",
+      "description": "Using compilers: C = gcc, CXX = g++",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/release-gcc",
+      "cacheVariables": {
+        "CMAKE_C_COMPILER": "gcc",
+        "CMAKE_CXX_COMPILER": "g++",
+        "CMAKE_BUILD_TYPE": "Release"
+      }
+    },
+    {
       "name": "release-gcc-examples",
       "displayName": "Release gcc (system-default) with examples",
       "description": "Using compilers: C = gcc, CXX = g++",
@@ -86,6 +98,10 @@
     {
       "name": "release-clang-examples",
       "configurePreset": "release-clang-examples"
+    },
+    {
+      "name": "release-gcc",
+      "configurePreset": "release-gcc"
     },
     {
       "name": "release-gcc-examples",
