@@ -15,6 +15,8 @@
       "cacheVariables": {
         "CMAKE_C_COMPILER": "clang",
         "CMAKE_CXX_COMPILER": "clang++",
+        "CMAKE_C_FLAGS_DEBUG": "-msse4.1",
+        "CMAKE_CXX_FLAGS_DEBUG": "-msse4.1",
         "CMAKE_BUILD_TYPE": "Debug"
       }
     },
@@ -28,6 +30,8 @@
         "CMAKE_C_COMPILER": "clang",
         "CMAKE_CXX_COMPILER": "clang++",
         "CMAKE_BUILD_TYPE": "Debug",
+        "CMAKE_C_FLAGS_DEBUG": "-msse4.1",
+        "CMAKE_CXX_FLAGS_DEBUG": "-msse4.1",
         "FORGE_BUILD_EXAMPLES": "ON"
       }
     },
